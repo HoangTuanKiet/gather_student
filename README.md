@@ -1,4 +1,4 @@
-# To run application, you need follow step below:
+# To run application, follow steps below:
 1. Config your MySql account to connect with MySql Server in application.properties
 2. Build Spring Boot Project with Maven
       
