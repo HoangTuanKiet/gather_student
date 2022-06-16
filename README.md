@@ -12,4 +12,4 @@
       
 4. Run Spring Boot app with _java -jar_ command
 
-      **java -jar target/mywebserviceapp-0.0.1-SNAPSHOT.jar**
+      **java -jar target/*.jar**
