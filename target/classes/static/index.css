@@ -1,0 +1,100 @@
+.fix-width {
+    overflow-x: scroll;
+    margin: 0 auto;
+}
+table {
+    width: 2000px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+
+thead{
+    background-color:#4CACBC;
+    color: #fff;
+}
+
+th,td{
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){
+    background-color: #F6FBF4;
+    border: 1px solid #dadada;
+
+}
+.navi{
+    width:100%;
+    height:100px;
+
+}
+h1{
+    text-align:center;
+    padding-top:20px;
+}
+.logo{
+    width: 100%;
+    height: 240px;
+    text-align:center;
+}
+
+.logo img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+
+}
+.main{
+    width:100%;
+    height:100px;
+    text-align:center;
+    padding-top:50px;
+}
+#fileupload{
+    font-size: 20px;
+}
+#upload-button{
+    font-size: 20px;
+}
+form{
+    width:100%;
+    text-align:center;
+    padding-top:50px;
+    /*margin: 2%;*/
+}
+
+.top{
+    border-bottom:1px solid black;
+}
+.bottom p{
+    border:1px solid black;
+    margin:0px;
+    padding:10px;
+}
+.bottom{
+    display:flex;
+}
+.ngaySinh{
+    padding:0px;
+}
+.dateTime{
+    margin:0px;
+    padding:10px;
+}
+.col-left{
+    width:25%
+}
+.col-right{
+    width:75%;
+}
+.row{
+    margin-left:36%;
+    width:25%;
+    display:flex;
+    margin-top: 1%;
+}
+#submitBtn{
+    margin: 1%;
+    width: 6%;
+    height: 30px;
+}

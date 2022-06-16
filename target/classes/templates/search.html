@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="index.html ::  head('Search')"></head>
+<body>
+<div th:replace="index.html :: header"></div>
+<div>
+    <form th:action="@{/search}" method="post">
+        <div class="row">
+            <div class="col-left">
+                <label for="name">Họ và tên:</label>
+            </div>
+            <div class="col-right">
+                <input type="text" id="name" name="name"></br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-left">
+                <label for="id">Mã học sinh:</label>
+            </div>
+            <div class="col-right">
+                <input type="text" id="id" name="id"></br>
+            </div>
+        </div>
+
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div class=" fix-width ">
+    <table>
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>Trường tiểu học</th>
+            <th>Quận/huyện</th>
+            <th>Mã học sinh</th>
+            <th>Lớp</th>
+            <th style="width: 210px;">Tên</th>
+            <th style="width: 130px;">Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Nơi sinh</th>
+            <th>Dân tộc</th>
+            <th style="width: 200px;">Hộ khẩu</th>
+            <th>SDT</th>
+            <th>Tổng điểm năm lớp 1</th>
+            <th>Tổng điểm năm lớp 2</th>
+            <th>Tổng điểm năm lớp 3</th>
+            <th>Tổng điểm năm lớp 4</th>
+            <th>Tổng điểm năm lớp 5</th>
+            <th>Tổng điểm kết quả 5 năm</th>
+            <th>Điểm ưu tiên</th>
+            <th>Tổng điểm sơ tuyển</th>
+            <th style="width: 250px;text-align: center;" >Ghi chú</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student, istart : ${students}">
+            <td th:text="${istart.index + 1}"></td>
+            <td th:text="${student.school}"></td>
+            <td th:text="${student.address}"></td>
+            <td th:text="${student.idstudent}"></td>
+            <td th:text="${student.className}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${#dates.format(student.birthday, 'dd-MMM-yyyy')}"></td>
+            <td th:text="${student.sex}"></td>
+            <td th:text="${student.noiSinh}"></td>
+            <td th:text="${student.danToc}"></td>
+            <td th:text="${student.hoKhau}"></td>
+            <td th:text="${student.phone}"></td>
+            <td th:text="${student.point1}"></td>
+            <td th:text="${student.point2}"></td>
+            <td th:text="${student.point3}"></td>
+            <td th:text="${student.point4}"></td>
+            <td th:text="${student.point5}"></td>
+            <td th:text="${student.total5year}"></td>
+            <td th:text="${student.priorityPoints}"></td>
+            <td th:text="${student.totalPoint}"></td>
+            <td th:text="${student.note}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
